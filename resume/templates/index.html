@@ -1,1 +1,26 @@
-<h1>Privet xyi!</h1>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <titel></titel>
+    </head>
+    <body>
+        <header>
+            <div id="navigation">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Админ панель</a></li>
+                    <li><a href="#">Test</a></li>
+                    <li><a id="clock"></a></li>
+        
+                </ul>
+            </div>
+        </header>
+        {% for item in experience %}
+        <div>
+            <h2>{{ item.title }}</h2>
+            <p>{{ item.content }}</p>
+        </div>
+        {% endfor %}
+    </body>
+</html>
