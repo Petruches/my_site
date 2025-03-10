@@ -6,5 +6,5 @@ def index(request):
     experience = Experience.objects.all()
     return render(request, 'index.html', {'experience': experience})
 
-def test(request):
-    return HttpResponse("<h1>tesе page</h1>")
+def me(request):
+    return render(request, 'me/_me.html', {'me': ["hello world"]})

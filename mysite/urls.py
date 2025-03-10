@@ -23,5 +23,4 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('myresumeadmin/', admin.site.urls),
     path('', include('resume.urls')),
-    path('test/', test),
 ]

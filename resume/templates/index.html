@@ -1,26 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <titel></titel>
+        <title>Резюме</title>
+        <link rel="stylesheet" href="{% static 'css/style.css'%}" type="text/css">
     </head>
     <body>
         <header>
-            <div id="navigation">
+            <div class="menu">
                 <ul>
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#">Админ панель</a></li>
-                    <li><a href="#">Test</a></li>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/myresumeadmin">Админ панель</a></li>
+                    <li><a href="/me">Test</a></li>
                     <li><a id="clock"></a></li>
-        
                 </ul>
             </div>
         </header>
-        {% for item in experience %}
-        <div>
-            <h2>{{ item.title }}</h2>
-            <p>{{ item.content }}</p>
-        </div>
-        {% endfor %}
+        {% block content %}{% endblock %}
+        {% include 'inc/_header.html' %}
     </body>
 </html>
