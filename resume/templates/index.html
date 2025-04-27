@@ -5,7 +5,6 @@
         <meta charset="UTF-8">
         <title>Резюме</title>
         <link rel="stylesheet" href="{% static 'css/style.css'%}" type="text/css">
-        <script src="{% static 'js/script.js' %}"></script>
     </head>
     <body>
         <header>
@@ -14,11 +13,12 @@
                     <li><a href="/">Главная</a></li>
                     <li><a href="/myresumeadmin">Админ панель</a></li>
                     <li><a href="/me">Test</a></li>
-                    <li><a href="#" id="clock">clock</a></li>
+                    <a id="clock">clock</a>
                 </ul>
             </div>
         </header>
         {% block content %}{% endblock %}
         {% include 'inc/_header.html' %}
     </body>
+    <script src="{% static 'js/script.js' %}"></script>
 </html>
