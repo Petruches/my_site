@@ -8,3 +8,6 @@ def index(request):
 
 def me(request):
     return render(request, 'me/_me.html', {'me': ["hello world"]})
+
+def content(request):
+    return render(request, 'content/_content.html')
