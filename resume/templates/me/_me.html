@@ -1,4 +1,9 @@
 {% extends 'index.html' %}
 {% block content %}
-<p>Привет</p>
+{% for item in me %}
+<div>
+    <h2>{{ item.title }}</h2>
+    <p>{{ item.content }}</p>
+</div>
+{% endfor %}
 {% endblock %}
