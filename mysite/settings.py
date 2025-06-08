@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'django',
         'USER': 'django',
-        'PASSWORD': '123456',
+        'PASSWORD': os.getenv("PASSWORD_DJANGO"), #123456
         'HOST': '127.0.0.1',
         'PORT': '',
     }
